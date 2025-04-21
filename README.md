@@ -1,6 +1,6 @@
 # nanocdr-x 
 
-<img align="right" valign="top" src="./assets/nanoCDR-X_logo_green.png" alt="nanocdr-x logo" height="150" width="150">
+<img align="right" style="vertical-align: top;" src="./assets/nanoCDR-X_logo_green.png" alt="nanocdr-x logo" height="150" width="150">
 
 ## Predict and explain CDR regions in nanobody sequences
 
