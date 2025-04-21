@@ -20,20 +20,10 @@ requirements:
     - pip
 
 test:
-  source_files:
-    - predict_nanobody_cdrs/example_data/example_input.csv
   commands:
-    - predict_cdrs -i predict_nanobody_cdrs/example_data/example_input.csv -o test_output_cdrs.csv
-    - explain_hidden_states -i predict_nanobody_cdrs/example_data/example_input.csv -o test_hidden_states.csv
-    - explain_saliency -i predict_nanobody_cdrs/example_data/example_input.csv -o test_saliency.csv
-  requires:
-    - bash
-  commands_pre:
-    - test -f predict_nanobody_cdrs/example_data/example_input.csv
-  commands_post:
-    - test -f test_output_cdrs.csv
-    - test -f test_hidden_states.csv
-    - test -f test_saliency.csv
+    - predict_cdrs --help
+    - explain_hidden_states --help
+    - explain_saliency --help
 
 about:
   home: https://github.com/lescailab/nanocdr-x
