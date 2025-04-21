@@ -1,6 +1,6 @@
 {
     "name": "nanocdr-x",
-    "image": "mcr.microsoft.com/vscode/devcontainers/anaconda:3",
+    "image": "mcr.microsoft.com/devcontainers/miniconda:3",
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {
             "version": "latest",
@@ -9,7 +9,8 @@
         },
         "ghcr.io/devcontainers/features/github-cli:1": {
             "version": "latest"
-        }
+        },
+        "ghcr.io/devcontainers/features/git:1": {}
     },
     "customizations": {
         "vscode": {
@@ -37,14 +38,5 @@
                 }
             }
         }
-    },
-    "forwardPorts": [],
-    "postCreateCommand": "conda install -y conda-build conda-verify anaconda-client python=3.11",
-    "remoteUser": "vscode",
-    "mounts": [
-        "source=${localWorkspaceFolder}/conda-bld,target=/opt/conda/conda-bld,type=bind,consistency=cached"
-    ],
-    "containerEnv": {
-        "CONDA_BUILD_EXTRA_ARGS": "--output-folder=/opt/conda/conda-bld"
     }
 }
