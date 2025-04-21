@@ -1,0 +1,1 @@
+include predict_nanobody_cdrs/example_data/*.csv

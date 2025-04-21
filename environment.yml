@@ -1,0 +1,14 @@
+name: predict_nanobody_cdrs_env
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - pandas=1.5.1
+  - pip
+  - pip:
+      - tensorflow==2.15.1
+      - keras==2.15.0
+      - click==8.1.8
+      - pyreadr==0.5.2
+      - tensorflow-metal==1.2.0
