@@ -30,7 +30,7 @@ All commands accept a required input CSV (`-i/--input`) with at least two column
 - `identifier`: unique sequence ID
 - `input`: amino-acid sequence string (max length 150)
 
-### 1. predict_cdrs
+### predict_cdrs
 
 Predicts CDR regions and outputs a CSV with columns `identifier`, `input`, `predicted_cdr1`, `predicted_cdr2`, `predicted_cdr3`.
 
@@ -42,7 +42,7 @@ predict_cdrs \
   --char_mapping /path/to/char_mapping.csv
 ```
 
-### 2. explain_hidden_states
+### explain_hidden_states
 
 Extracts hidden-state vectors for each non-padded token. Outputs a CSV with columns:
 
@@ -54,7 +54,7 @@ explain_hidden_states \
   -o path/to/output_hidden_states.csv
 ```
 
-### 3. explain_saliency
+### explain_saliency
 
 Computes gradient-based saliency maps, recording both time point and input position. Outputs a CSV with columns:
 
@@ -88,7 +88,7 @@ predict_cdrs -i predict_nanobody_cdrs/example_data/example_input.csv -o example_
 
 ## Contributing
 
-Contributions welcome! Please open issues or pull requests on the GitHub repository: <https://github.com/YourOrg/nanocdr-x>
+Contributions welcome! Please open issues or pull requests on the GitHub repository: <https://github.com/lescailab/nanocdr-x>
 
 ---
 
