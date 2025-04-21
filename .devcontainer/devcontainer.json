@@ -1,0 +1,50 @@
+{
+    "name": "nanocdr-x",
+    "image": "mcr.microsoft.com/vscode/devcontainers/anaconda:3",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "version": "latest",
+            "enableNonRootDocker": "true",
+            "moby": "true"
+        },
+        "ghcr.io/devcontainers/features/github-cli:1": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "ms-vscode.makefile-tools",
+                "redhat.vscode-yaml",
+                "streetsidesoftware.code-spell-checker"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/opt/conda/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "python.formatting.autopep8Path": "/opt/conda/bin/autopep8",
+                "python.formatting.yapfPath": "/opt/conda/bin/yapf",
+                "python.linting.flake8Path": "/opt/conda/bin/flake8",
+                "python.linting.pylintPath": "/opt/conda/bin/pylint",
+                "yaml.schemas": {
+                    "https://json.schemastore.org/conda-recipe.json": "*/meta.yaml"
+                },
+                "terminal.integrated.env.linux": {
+                    "CONDA_BUILD_SYSROOT": "/opt/conda/conda-bld"
+                }
+            }
+        }
+    },
+    "forwardPorts": [],
+    "postCreateCommand": "conda install -y conda-build conda-verify anaconda-client python=3.11",
+    "remoteUser": "vscode",
+    "mounts": [
+        "source=${localWorkspaceFolder}/conda-bld,target=/opt/conda/conda-bld,type=bind,consistency=cached"
+    ],
+    "containerEnv": {
+        "CONDA_BUILD_EXTRA_ARGS": "--output-folder=/opt/conda/conda-bld"
+    }
+}
