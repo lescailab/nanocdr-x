@@ -1,1 +1,3 @@
 include predict_nanobody_cdrs/example_data/*.csv
+recursive-include predict_nanobody_cdrs/nanobodies_lstm_sequence_model_trained *
+include predict_nanobody_cdrs/char_mapping.csv
