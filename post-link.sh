@@ -12,7 +12,7 @@ echo "======================"
 
 echo "Installing dependencies with Pip..."
 pip install --no-cache-dir tensorflow==2.15.1 keras==2.15.0 click==8.1.8 pyreadr==0.5.2 tensorflow-metal==1.2.0 || {
-    echo "❌ ERROR: Pip failed to install dependencies"
+    echo "ERROR: Pip failed to install dependencies"
     exit 1
 }
 
@@ -21,4 +21,4 @@ echo "DEBUG: Conda List After Pip Install"
 conda list
 echo "======================"
 
-echo "✅ post-link.sh completed successfully!"
+echo "post-link.sh completed successfully!"
