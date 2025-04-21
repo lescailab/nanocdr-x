@@ -1,6 +1,8 @@
-# nanocdr-x
+# nanocdr-x 
 
-**Predict and explain CDR regions in nanobody sequences**
+<img source="assets/nanoCDR-X_logo_green.png" style="float: right;" alt="nanocdr-x logo" height="330" width="300">
+
+## Predict and explain CDR regions in nanobody sequences
 
 A lightweight CLI package for predicting complementarity-determining regions (CDRs) in nanobody sequences and extracting model interpretability data (hidden states and saliency maps) from a trained TensorFlow LSTM model.
 
