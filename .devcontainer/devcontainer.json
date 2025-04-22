@@ -1,6 +1,6 @@
 {
     "name": "nanocdr-x",
-    "image": "ghcr.io/matheusfvesco/devcontainer-templates/tensorflow-gpu:0.1.0",
+    "image": "mcr.microsoft.com/devcontainers/miniconda:3",
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {
             "version": "latest",
@@ -10,8 +10,7 @@
         "ghcr.io/devcontainers/features/github-cli:1": {
             "version": "latest"
         },
-        "ghcr.io/devcontainers/features/git:1": {},
-        "ghcr.io/devcontainers/features/anaconda:1": {}
+        "ghcr.io/devcontainers/features/git:1": {}
     },
     "customizations": {
         "vscode": {
