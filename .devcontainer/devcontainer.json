@@ -1,6 +1,6 @@
 {
     "name": "nanocdr-x",
-    "image": "ghcr.io/lescailab/rstudio-tensorflow:latest",
+    "image": "ghcr.io/matheusfvesco/devcontainer-templates/tensorflow-gpu:0.1.0",
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {
             "version": "latest",
